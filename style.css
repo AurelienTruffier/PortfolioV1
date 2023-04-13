@@ -1,0 +1,228 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+}
+
+#top_container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('ressources/thomas-tastet-hSODeSbvzE0-unsplash.jpg');
+    background-size: cover;
+}
+
+/* BARRE DE NAVIGATION */
+
+nav{
+    display: flex;
+    padding: 12px;
+    font-family: 'DynaPuff', cursive;
+    justify-content: space-between;
+}
+
+nav #logo_site{
+    width: 80px;
+}
+
+nav ul{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul{
+    width: 65%;
+}
+
+nav ul li{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+nav ul li a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 800px){
+    nav ul li{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    nav ul li a{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 600px){
+    nav{
+        display: block;
+        padding-bottom: 12px;
+        padding-top: 18px;
+    }
+
+    nav #logo_site{
+        display: none;
+    }
+
+    nav ul{
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav ul li{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    nav ul li a{
+        font-size: 1.15rem;
+    }
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+header h1{
+    text-align: center;
+    font-size: 5rem;
+    padding: 24px;
+    font-family: 'DynaPuff', cursive;
+    color: white;
+}
+
+header h2{
+    text-align: center;
+    font-size: 3rem;
+    padding: 24px;
+    font-family: 'DynaPuff', cursive;
+    color: white;
+}
+
+header p{
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 24px;
+    font-family: 'DynaPuff', cursive;
+    color: white;
+}
+
+@media (max-width: 800px){
+    header h1{
+        font-size: 4rem;
+        padding: 24px;
+    }
+
+    header h2{
+        font-size: 2.5rem;
+        padding: 24px;
+    }
+
+    header p{
+        font-size: 1.5rem;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 600px){
+    header h1{
+        font-size: 3rem;
+        padding: 16px;
+    }
+
+    header h2{
+        font-size: 2rem;
+        padding: 16px;
+    }
+
+    header p{
+        font-size: 1.2rem;
+        padding: 16px;
+    }
+}
+
+/* PORTFOLIO */
+
+#portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('ressources/dries-augustyns-WzKPT0IuUrU-unsplash.jpg');
+    background-size: cover;
+}
+
+.project_card{
+    width: 500px;
+    margin: 12px 60px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: azure;
+    transition: transform 0.1s linear;
+}
+
+.project_card:hover{
+    transform: scale(1.02);
+}
+
+.container_image{
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.container_info h3{
+    margin: 5px;
+    text-align: center;
+    font-family: 'DynaPuff', cursive;
+    font-size: 1.4rem;
+}
+
+.container_info h4{
+    margin: 5px;
+    text-align: center;
+    font-family: 'DynaPuff', cursive;
+    font-size: 1rem;
+}
+
+.container_link{
+    padding: 12px 8px;
+}
+
+.container_link .project_button{
+    background-color: #242d95;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 24px;
+}
+
+.container_link .project_button a{
+    font-family: 'DynaPuff', cursive;
+    color: white;
+    text-decoration: none;
+}
+
+#weather-app .container_image{
+    background-image: url('ressources/weather-app.png');
+}
+
+#pong-pixiJS .container_image{
+    background-image: url('ressources/pong.png');
+}
+
+#site_kyoto .container_image{
+    background-image: url('ressources/kyoto.png');
+}
+
