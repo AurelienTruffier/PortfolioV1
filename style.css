@@ -93,6 +93,14 @@ nav ul li:hover::after{
     }
 }
 
+@media (min-width: 1600px){
+    nav ul li{
+        margin-left: 32px;
+        margin-right: 32px;
+        font-size: 2rem;
+    }
+}
+
 /* HEADER */
 
 header{
@@ -121,6 +129,7 @@ header p{
     text-align: center;
     font-size: 1.8rem;
     padding: 24px;
+    margin-top: 5vh;
     font-family: 'Open Sans', sans-serif;
     color: #eeeeee;
 }
@@ -154,8 +163,23 @@ header p{
     }
 
     header p{
-        font-size: 1.18rem;
+        font-size: 1.8rem;
         padding: 16px;
+    }
+}
+
+@media (min-width: 1600px){
+    header h1{
+        font-size: 6rem;
+        padding: 32px;
+    }
+    header h2{
+        font-size: 4rem;
+        padding: 32px;
+    }
+    header p{
+        font-size: 3rem;
+        padding: 32px;
     }
 }
 
@@ -173,7 +197,7 @@ header p{
 }
 
 .project_card{
-    width: 500px;
+    width: 600px;
     margin: 12px 60px;
     overflow: hidden;
     border-radius: 8px;
@@ -260,12 +284,16 @@ header p{
 }
 
 @media (max-width: 600px){
+    .project_card{
+        margin: 12px 5px;
+    }
+
     .container_image{
-        height: 120px;
+        height: 180px;
     }
 
     .container_info{
-        height: 220px;
+        height: 120px;
     }
 
     .container_info h3{
@@ -306,8 +334,8 @@ header p{
 #skills_container .skill_item{
     box-sizing: border-box;
     background-color: #eeeeee;
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     padding: 12px;
     border-radius: 6px;
     transition: transform 0.1s linear;
@@ -384,6 +412,13 @@ header p{
     }
     #skills_container .skill_item{
         margin-top: 8px;
+    }
+}
+
+@media (min-width: 1600px){
+    #skills_container .skill_item{
+        width: 260px;
+        height: 260px;
     }
 }
 
