@@ -1,10 +1,12 @@
 *, ::after, ::before{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 #top_container{
     width: 100%;
+    height: auto;
     min-height: 100vh;
     background-image: url('ressources/thomas-tastet-hSODeSbvzE0-unsplash.jpg');
     background-size: cover;
@@ -15,7 +17,7 @@
 nav{
     display: flex;
     padding: 12px;
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Open Sans', sans-serif;
     justify-content: space-between;
 }
 
@@ -36,23 +38,34 @@ nav ul{
 }
 
 nav ul li{
+    position: relative;
     margin-left: 16px;
     margin-right: 16px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #eeeeee;
 }
 
-nav ul li a{
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: white;
+nav ul li::after{
+    content: '';
+    position: absolute;
+    background-color: #eeeeee;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transition: width 0.2s ease-in-out;
+}
+
+nav ul li:hover::after{
+    width: 100%;
 }
 
 @media (max-width: 800px){
     nav ul li{
         margin-left: 8px;
         margin-right: 8px;
-    }
-
-    nav ul li a{
         font-size: 1.3rem;
     }
 }
@@ -76,9 +89,6 @@ nav ul li a{
     nav ul li{
         margin-left: 5px;
         margin-right: 5px;
-    }
-
-    nav ul li a{
         font-size: 1.15rem;
     }
 }
@@ -95,24 +105,24 @@ header h1{
     text-align: center;
     font-size: 5rem;
     padding: 24px;
-    font-family: 'DynaPuff', cursive;
-    color: white;
+    font-family: 'Open Sans', sans-serif;
+    color: #eeeeee;
 }
 
 header h2{
     text-align: center;
     font-size: 3rem;
     padding: 24px;
-    font-family: 'DynaPuff', cursive;
-    color: white;
+    font-family: 'Open Sans', sans-serif;
+    color: #eeeeee;
 }
 
 header p{
     text-align: center;
     font-size: 1.8rem;
     padding: 24px;
-    font-family: 'DynaPuff', cursive;
-    color: white;
+    font-family: 'Open Sans', sans-serif;
+    color: #eeeeee;
 }
 
 @media (max-width: 800px){
@@ -144,7 +154,7 @@ header p{
     }
 
     header p{
-        font-size: 1.2rem;
+        font-size: 1.18rem;
         padding: 16px;
     }
 }
@@ -158,7 +168,7 @@ header p{
     flex-shrink: 0;
     width: 100%;
     min-height: 100vh;
-    background-image: url('ressources/dries-augustyns-WzKPT0IuUrU-unsplash.jpg');
+    background-image: url('ressources/hal-gatewood-Pr578ZCufII-unsplash.jpg');
     background-size: cover;
 }
 
@@ -167,7 +177,7 @@ header p{
     margin: 12px 60px;
     overflow: hidden;
     border-radius: 8px;
-    background-color: azure;
+    background-color: #eeeeee;
     transition: transform 0.1s linear;
 }
 
@@ -176,27 +186,45 @@ header p{
 }
 
 .container_image{
-    height: 180px;
+    margin: 3px;
+    height: 280px;
+    border-radius: 5px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
 }
 
 .container_info h3{
-    margin: 5px;
     text-align: center;
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
 }
 
 .container_info h4{
     margin: 5px;
     text-align: center;
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
 }
 
+.container_info h4 a{
+    font-size: 1.05rem;
+    text-decoration: none;
+    color: #242d95;
+}
+
 .container_link{
-    padding: 12px 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
 }
 
 .container_link .project_button{
@@ -205,24 +233,272 @@ header p{
     border-radius: 5px;
     outline: none;
     cursor: pointer;
-    padding: 12px 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    width: 42%;
+    height: 50px;
+    color: #eeeeee;
 }
 
 .container_link .project_button a{
-    font-family: 'DynaPuff', cursive;
-    color: white;
+    font-family: 'Open Sans', sans-serif;
+    color: #eeeeee;
     text-decoration: none;
 }
 
-#weather-app .container_image{
+#project_portfolio .container_image{
+    background-image: url('ressources/portfolio.png');
+}
+
+#project_weather-app .container_image{
     background-image: url('ressources/weather-app.png');
 }
 
-#pong-pixiJS .container_image{
-    background-image: url('ressources/pong.png');
+#project_site-kyoto .container_image{
+    background-image: url('ressources/site-kyoto.png');
 }
 
-#site_kyoto .container_image{
-    background-image: url('ressources/kyoto.png');
+@media (max-width: 600px){
+    .container_image{
+        height: 120px;
+    }
+
+    .container_info{
+        height: 220px;
+    }
+
+    .container_info h3{
+        font-size: 1.2rem;
+    }
+
+    .container_link{
+        height: 50px;
+    }
+
+    .container_link .project_button{
+        width: 47%;
+        height: 40px;
+        font-size: 0.9rem;
+    }
 }
 
+/* COMPETENCES */
+
+#skills{
+    height: auto;
+    min-height: 100vh;
+    background-image: url('ressources/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg');
+    background-size: cover;
+}
+
+#skills_container{
+    display: flex;
+    height: auto;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 48px;
+}
+
+#skills_container .skill_item{
+    box-sizing: border-box;
+    background-color: #eeeeee;
+    width: 180px;
+    height: 180px;
+    padding: 12px;
+    border-radius: 6px;
+    transition: transform 0.1s linear;
+}
+
+#skills_container .skill_item:hover{
+    transform: scale(1.03);
+}
+
+#skills_container .skill_item .skill_img_container{
+    height: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#skills_container .skill_item .skill_name_container{
+    height: 50%;
+}
+
+#skills_container .skill_item .skill_name_container h3{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 90px;
+}
+
+#skills_container #html .skill_img_container{
+    background-image: url('ressources/logo/html-5.png');
+}
+
+#skills_container #css .skill_img_container{
+    background-image: url('ressources/logo/css-3.png');
+}
+
+#skills_container #javascript .skill_img_container{
+    background-image: url('ressources/logo/js.png');
+}
+
+#skills_container #vuejs .skill_img_container{
+    background-image: url('ressources/logo/vuejs.png');
+}
+
+#skills_container #react .skill_img_container{
+    background-image: url('ressources/logo/react.png');
+}
+
+#skills_container #sass .skill_img_container{
+    background-image: url('ressources/logo/sass.png');
+}
+
+#skills_container #bulma .skill_img_container{
+    background-image: url('ressources/logo/bulma.png');
+}
+
+#skills_container #php .skill_img_container{
+    background-image: url('ressources/logo/php.png');
+}
+
+#skills_container #mysql .skill_img_container{
+    background-image: url('ressources/logo/MySQL.svg');
+}
+
+#skills_container #nodejs .skill_img_container{
+    background-image: url('ressources/logo/Node.js_logo.svg');
+}
+
+#skills_container #git .skill_img_container{
+    background-image: url('ressources/logo/Git-Icon-1788C.png');
+}
+
+@media (max-width: 480px){
+    #skills_container{
+        flex-direction: column;
+    }
+    #skills_container .skill_item{
+        margin-top: 8px;
+    }
+}
+
+/* CONTACT */
+
+#contact{
+    height: 100vh;
+    background-image: url('ressources/aryan-dhiman-iGLLtLINSkw-unsplash.jpg');
+    background-size: cover;
+}
+
+#contact #contact_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+}
+
+#contact #contact_container h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7.5rem;
+    text-align: center;
+    color: #eeeeee;
+}
+
+#contact #contact_container #button_container button{
+    width: 25vw;
+    height: 9vh;
+    margin: 0 18px;
+    background-color: #242d95;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+}
+
+#contact #contact_container #button_container button a{
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+#contact #contact_container #button_container button:hover{
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+
+#contact footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    text-align: center;
+}
+
+#contact footer p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
+    color: #eeeeee;
+}
+
+@media (max-width: 600px){
+    #contact #contact_container h2{
+        font-size: 4rem;
+    }
+
+    #contact footer p{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px){
+    #contact #contact_container h2{
+        font-size: 3rem;
+    }
+
+    #contact #contact_container #button_container button{
+        width: 35vw;
+        height: 8vh;
+    }
+
+    #contact footer p{
+        font-size: 1rem;
+    }
+}
+
+/* BOUTON RETOUR HAUT DE PAGE */
+
+#scroll_up_button{
+    display: none;
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    background-color: #242d95;
+    background-image: url('ressources/down-chevron.png');
+    background-size: cover;
+    opacity: 0.6;
+    bottom: 60px;
+    right: 16px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    transform: rotate(180deg);
+    transition: transform 0.1s linear;
+}
+
+#scroll_up_button:hover{
+    transform: rotate(180deg) scale(1.1);
+}
+
+#scroll_up_button.show{
+    display: block;
+}

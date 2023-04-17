@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="ressources/programming.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
     <title>Aurélien Truffier</title>
+    
 </head>
 <body>
     <main>
@@ -15,85 +17,178 @@
             <nav>
                 <img src="ressources/programming.png" alt="" id="logo_site">
                 <ul>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#skills">Compétences</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li id="portfolio_nav_link">Portfolio</li>
+                    <li id="skills_nav_link">Compétences</li>
+                    <li id="contact_nav_link">Contact</li>
                 </ul>
             </nav>
             <header>
                 <h1>Aurélien Truffier</h1>
                 <h2>Développeur front-end</h2>
-                <p>Bienvenue sur mon portfolio web ! Je suis ravi que vous soyez ici pour découvrir mon travail ! Sur ce site vous trouverez certains de mes projets web ainsi que des informations sur mes compétences. Bonne visite ! 😉</p>
+                <p>Bienvenue sur mon portfolio ! Je suis ravi que vous soyez ici pour découvrir mon travail ! Sur ce site vous trouverez certains de mes projets web ainsi que des informations sur mes compétences. Bonne visite ! 😉</p>
             </header>
         </div>
         <section id="portfolio">
-            <div class="project_card" id="weather-app">
+            <div class="project_card" id="project_portfolio">
+                <div class="container_image">
+
+                </div>
+                <div class="container_info">
+                    <h3>Ce portfolio</h3>
+                    <h4>Réalisé en HTML, CSS et JS vanilla.</h4>
+                </div>
+                <div class="container_link">
+                    <button class="project_button" role="button">
+                        Vous y êtes !
+                    </button>
+                    <button class="project_button" role="button">
+                        <a href="https://github.com/AurelienTruffier/PortfolioV1" target="_blank">GitHub</a>
+                    </button>
+                </div>
+            </div>
+            <div class="project_card" id="project_weather-app">
                 <div class="container_image">
 
                 </div>
                 <div class="container_info">
                     <h3>Application météo</h3>
-                    <hr>
-                    <h4>Réalisée en HTML, CSS et JS vanilla durant mon temps libre.</h4>
+                    <h4>Réalisée en HTML, CSS et JS vanilla.</h4>
                 </div>
                 <div class="container_link">
                     <button class="project_button" role="button">
-                        <a href="projets/weather-app/index.html" target="_blank">Voir ce projet</a>
+                        <a href="" target="_blank">Voir ce projet</a>
                     </button>
-                </div>
-            </div>
-            <div class="project_card" id="serre_auto">
-                <div class="container_image">
-
-                </div>
-                <div class="container_info">
-                    <h3>Application de gestion d'une serre automatique</h3>
-                    <hr>
-                    <h4>Réalisée en Vue.JS dans le cadre de mon BTS Systèmes Numériques en 2023.</h4>
-                </div>
-                <div class="container_link">
                     <button class="project_button" role="button">
-                        <a href="projets/" target="_blank">Voir ce projet</a>
+                        <a href="https://github.com/AurelienTruffier/Weather-App" target="_blank">GitHub</a>
                     </button>
                 </div>
             </div>
-            <div class="project_card" id="site_kyoto">
+            <div class="project_card" id="project_site-kyoto">
                 <div class="container_image">
 
                 </div>
                 <div class="container_info">
                     <h3>Site Web touristique sur la ville de Kyoto</h3>
-                    <hr>
                     <h4>Réalisé en HTML/CSS dans le cadre de la formation Udemy <a href="https://www.udemy.com/course/formation-complete-developpeur-front-end/">Formation complète développeur front-end</a>.</h4>
                 </div>
                 <div class="container_link">
                     <button class="project_button" role="button">
-                        <a href="projets/SiteKyoto/index.html" target="_blank">Voir ce projet</a>
+                        <a href="" target="_blank">Voir ce projet</a>
                     </button>
-                </div>
-            </div>
-            <div class="project_card" id="pong-pixiJS">
-                <div class="container_image">
-
-                </div>
-                <div class="container_info">
-                    <h3>Reproduction de Pong sur navigateur</h3>
-                    <hr>
-                    <h4>Réalisé avec la bibliothèque JavaScript Pixi.JS durant mon temps libre.</h4>
-                </div>
-                <div class="container_link">
                     <button class="project_button" role="button">
-                        <a href="projets/pong-pixiJS/index.html" target="_blank">Voir ce projet</a>
+                        <a href="https://github.com/AurelienTruffier/Site-Kyoto" target="_blank">GitHub</a>
                     </button>
                 </div>
             </div>
         </section>
         <section id="skills">
+            <div id="skills_container">
+                <div class="skill_item" id="html">
+                    <div class="skill_img_container">
 
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>HTML</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="css">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>CSS</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="javascript">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>JavaScript</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="vuejs">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>Vue.JS</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="react">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>React</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="sass">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>Sass</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="bulma">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>Bulma</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="php">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>PHP</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="mysql">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>MySQL</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="nodejs">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>Node.js</h3>
+                    </div>
+                </div>
+                <div class="skill_item" id="git">
+                    <div class="skill_img_container">
+
+                    </div>
+                    <div class="skill_name_container">
+                        <h3>Git</h3>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="contact">
-
+            <div id="contact_container">
+                <h2>Me contacter</h2>
+                <div id="button_container">
+                    <button role="button"><a href="mailto:truffier.aurelien@outlook.fr">E-mail ✉️</a></button>
+                    <button role="button"><a href="https://github.com/AurelienTruffier" target="_blank">GitHub 💻</a></button>
+                </div>
+            </div>
+            <footer>
+                <p>Réalisé avec ❤️ par Aurélien Truffier 😁</p>
+            </footer>
         </section>
     </main>
+    <button id="scroll_up_button" role="button">
+        
+    </button>
+    <script src="app.js"></script>
 </body>
 </html>
