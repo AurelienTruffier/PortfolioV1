@@ -283,6 +283,10 @@ header p{
     background-image: url('ressources/site-kyoto.png');
 }
 
+#project_pizzeria-margherita .container_image{
+    background-image: url('ressources/pizzeria-margherita.png');
+}
+
 @media (max-width: 600px){
     .project_card{
         margin: 12px 5px;
