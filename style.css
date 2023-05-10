@@ -6,8 +6,9 @@
 
 #top_container{
     width: 100%;
+    position: relative;
     height: auto;
-    min-height: 100vh;
+    height: 100vh;
     background-image: url('ressources/thomas-tastet-hSODeSbvzE0-unsplash.jpg');
     background-size: cover;
 }
@@ -75,6 +76,7 @@ nav ul li:hover::after{
         display: block;
         padding-bottom: 12px;
         padding-top: 18px;
+        height: 60px;
     }
 
     nav #logo_site{
@@ -104,9 +106,14 @@ nav ul li:hover::after{
 /* HEADER */
 
 header{
+    position: relative;
     display: flex;
-    height: 100%;
+    height: calc(100% - 104px);
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateY(-50px);
 }
 
 header h1{
@@ -135,6 +142,9 @@ header p{
 }
 
 @media (max-width: 800px){
+    header{
+        transform: none;
+    }
     header h1{
         font-size: 4rem;
         padding: 24px;
@@ -152,6 +162,9 @@ header p{
 }
 
 @media (max-width: 600px){
+    header{
+        height: calc(100% - 60px);
+    }
     header h1{
         font-size: 3rem;
         padding: 16px;
@@ -163,7 +176,7 @@ header p{
     }
 
     header p{
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         padding: 16px;
     }
 }
@@ -336,6 +349,9 @@ header p{
 }
 
 #skills_container .skill_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     background-color: #eeeeee;
     width: 200px;
@@ -345,68 +361,73 @@ header p{
     transition: transform 0.1s linear;
 }
 
+#skills_container .skill_item .skill_item_container{
+    width: 140px;
+    height: 140px;
+}
+
 #skills_container .skill_item:hover{
     transform: scale(1.03);
 }
 
-#skills_container .skill_item .skill_img_container{
+#skills_container .skill_item .skill_item_container .skill_img_container{
     height: 50%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-#skills_container .skill_item .skill_name_container{
+#skills_container .skill_item .skill_item_container .skill_name_container{
     height: 50%;
 }
 
-#skills_container .skill_item .skill_name_container h3{
+#skills_container .skill_item .skill_item_container .skill_name_container h3{
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     line-height: 90px;
 }
 
-#skills_container #html .skill_img_container{
+#skills_container #html .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/html-5.png');
 }
 
-#skills_container #css .skill_img_container{
+#skills_container #css .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/css-3.png');
 }
 
-#skills_container #javascript .skill_img_container{
+#skills_container #javascript .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/js.png');
 }
 
-#skills_container #vuejs .skill_img_container{
+#skills_container #vuejs .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/vuejs.png');
 }
 
-#skills_container #react .skill_img_container{
+#skills_container #react .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/react.png');
 }
 
-#skills_container #sass .skill_img_container{
+#skills_container #sass .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/sass.png');
 }
 
-#skills_container #bulma .skill_img_container{
+#skills_container #bulma .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/bulma.png');
 }
 
-#skills_container #php .skill_img_container{
+#skills_container #php .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/php.png');
 }
 
-#skills_container #mysql .skill_img_container{
+#skills_container #mysql .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/MySQL.svg');
 }
 
-#skills_container #nodejs .skill_img_container{
+#skills_container #nodejs .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/Node.js_logo.svg');
 }
 
-#skills_container #git .skill_img_container{
+#skills_container #git .skill_item_container .skill_img_container{
     background-image: url('ressources/logo/Git-Icon-1788C.png');
 }
 
@@ -450,7 +471,7 @@ header p{
 }
 
 #contact #contact_container #button_container button{
-    width: 25vw;
+    width: 22vw;
     height: 9vh;
     margin: 0 18px;
     background-color: #242d95;
@@ -494,6 +515,10 @@ header p{
         font-size: 4rem;
     }
 
+    #contact #contact_container #button_container button a{
+        font-size: 0.9rem;
+    }
+
     #contact footer p{
         font-size: 1.2rem;
     }
@@ -505,7 +530,7 @@ header p{
     }
 
     #contact #contact_container #button_container button{
-        width: 35vw;
+        width: 20vw;
         height: 8vh;
     }
 
